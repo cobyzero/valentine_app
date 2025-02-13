@@ -3,6 +3,7 @@ import 'package:lottie/lottie.dart';
 import 'package:valentine_app/core/barrels/packages_barrel.dart';
 import 'package:valentine_app/core/barrels/util_barrel.dart';
 import 'package:valentine_app/core/barrels/widget_barrel.dart';
+import 'package:valentine_app/core/router/router_def.dart';
 import 'package:valentine_app/core/utils/const.dart';
 
 class MatchView extends StatelessWidget {
@@ -18,28 +19,59 @@ class MatchView extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Hero(
-                    tag: "love-tag",
-                    child: Lottie.asset(
-                      heartMainAnimation,
-                      width: 20.w,
-                      height: 20.w,
+                  IconButton(
+                    onPressed: () {
+                      context.pop();
+                    },
+                    icon: Icon(
+                      Icons.arrow_back_ios,
                     ),
-                  ),
+                  ).only(left: 5.w),
                   Texts.bold(
                     "Recuerdos",
                     fontSize: 20,
                   ),
-                  Hero(
-                    tag: "love-tag2",
-                    child: Lottie.asset(
-                      heartMainAnimation,
-                      width: 20.w,
-                      height: 20.w,
+                  InkWell(
+                    onTap: () => context.go(RouterDef.dateRoute),
+                    child: Hero(
+                      tag: "love-tag2",
+                      child: Lottie.asset(
+                        heartMainAnimation,
+                        width: 20.w,
+                        height: 20.w,
+                      ),
                     ),
                   ),
                 ],
-              )
+              ),
+              Container(
+                width: double.infinity,
+                height: 50.h,
+                margin: EdgeInsets.symmetric(
+                  horizontal: 3.w,
+                  vertical: 2.h,
+                ),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(16),
+                  image: DecorationImage(
+                    image: AssetImage(imageDemo),
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  WidgetAnimatedButton(
+                    animation: likeAnimation,
+                    onTap: () {},
+                  ),
+                  WidgetAnimatedButton(
+                    animation: notLikeAnimation,
+                    onTap: () {},
+                  ),
+                ],
+              ),
             ],
           ),
         ),
