@@ -1,5 +1,5 @@
 String getTextDate() {
-  DateTime fechaPasada = DateTime(2025, 01, 13);
+  DateTime fechaPasada = DateTime(2025, 01, 18);
   DateTime fechaActual = DateTime.now();
   int anios = fechaActual.year - fechaPasada.year;
 

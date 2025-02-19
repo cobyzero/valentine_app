@@ -3,6 +3,7 @@ import 'package:lottie/lottie.dart';
 import 'package:valentine_app/core/barrels/packages_barrel.dart';
 import 'package:valentine_app/core/barrels/util_barrel.dart';
 import 'package:valentine_app/core/barrels/widget_barrel.dart';
+import 'package:valentine_app/core/router/router_def.dart';
 import 'package:valentine_app/core/utils/const.dart';
 
 class QuestionView extends StatelessWidget {
@@ -56,11 +57,27 @@ class QuestionView extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      WidgetMiniButton(text: "Si!"),
+                      WidgetMiniButton(
+                        text: "Si!",
+                        onTap: () => context.go(RouterDef.matchRoute),
+                      ),
                       WidgetMiniButton(
                         text: "No :(",
                         backgroundColor: Palette.white,
                         textColor: Palette.black,
+                        onTap: () {
+                          showDialog(
+                            context: context,
+                            builder: (context) {
+                              return AlertDialog(
+                                content: Texts.bold(
+                                  "Porque :(",
+                                  fontSize: 20,
+                                ),
+                              );
+                            },
+                          );
+                        },
                       ),
                     ],
                   )

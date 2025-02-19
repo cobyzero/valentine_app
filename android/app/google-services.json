@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "899334986632",
+    "project_id": "valentine-app-9f402",
+    "storage_bucket": "valentine-app-9f402.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:899334986632:android:43ec1a72d36565cade383d",
+        "android_client_info": {
+          "package_name": "com.cobyzero.valentine_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMGAi2XZeRwMkmcrwChRzffbp4XBNg1bY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

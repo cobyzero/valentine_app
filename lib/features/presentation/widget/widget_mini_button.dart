@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:valentine_app/core/barrels/packages_barrel.dart';
 import 'package:valentine_app/core/barrels/util_barrel.dart';
-import 'package:valentine_app/core/router/router_def.dart';
 
 class WidgetMiniButton extends StatelessWidget {
   const WidgetMiniButton({
@@ -9,14 +8,16 @@ class WidgetMiniButton extends StatelessWidget {
     required this.text,
     this.backgroundColor,
     this.textColor,
+    this.onTap,
   });
   final String text;
   final Color? backgroundColor;
   final Color? textColor;
+  final Function()? onTap;
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () => context.go(RouterDef.matchRoute),
+      onTap: onTap,
       child: Container(
         padding: EdgeInsets.symmetric(
           horizontal: 1.w,

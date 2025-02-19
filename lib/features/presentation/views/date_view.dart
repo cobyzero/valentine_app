@@ -29,9 +29,17 @@ class DateView extends StatelessWidget {
                   fit: BoxFit.cover,
                   animate: true,
                 ).only(bottom: 4.h),
-                Texts.bold(
-                  getTextDate(),
-                  fontSize: 22,
+                Column(
+                  children: [
+                    Texts.bold(
+                      getTextDate(),
+                      fontSize: 22,
+                    ).only(bottom: 2.h),
+                    Texts.bold(
+                      "contigo mi amor",
+                      fontSize: 22,
+                    ),
+                  ],
                 ),
               ],
             ),

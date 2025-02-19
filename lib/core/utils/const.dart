@@ -3,6 +3,6 @@ const heartMainAnimation = 'assets/animations/heart_main.json';
 const calendarAnimation = 'assets/animations/calendar_animation.json';
 const likeAnimation = 'assets/animations/like_animation.json';
 const notLikeAnimation = 'assets/animations/not_like_animation.json';
-const imageDemo = 'assets/images/image_demo.jpeg';
+
 const calendarActiveAnimation =
     'assets/animations/calendar_active_animation.json';
